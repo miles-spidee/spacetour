@@ -1,0 +1,158 @@
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    /* border: 1px yellow solid; */
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow: hidden;
+    color: white;
+}
+
+#bg-vid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+.logo {
+    color: white;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+#get-name {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    z-index: 10;
+    font-size: 16px;
+}
+
+#get-name .desc {
+    text-align: center;
+    padding: 0 4em;
+    font-size: 2em;
+    padding-top: 3%;
+}
+
+#get-name form {
+    min-width: 20%;
+    padding: 1em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 5%;
+}
+
+#get-name .input-wrapper {
+    position: relative;
+    background: linear-gradient(-45deg, rgb(26, 125, 255), rgb(87, 193, 255));
+    padding: 1px;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#get-name form input,
+#name-submit {
+    color: white;
+    border-radius: 15px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#name-input {
+    background-color: black;
+    width: 20em;
+    border: none;
+    padding: 1em;
+    z-index: 5;
+}
+
+.p-ns {
+    display: flex;
+    justify-content: center;
+}
+
+#name-submit {
+    border: white 1px solid;
+    text-align: center;
+    padding: 0.8em 1.4em;
+    border: 1px white solid;
+    cursor: pointer;
+    z-index: 5;
+    transition: 0.2s background-color;
+    letter-spacing: 2px;
+    background-color: transparent;
+}
+
+#name-submit:hover {
+    background-color: white;
+    color: black;
+}
+
+.earth-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    align-content: center;
+    background-position: center;
+    background-image: url(/resources/img/earth.png);
+    padding-top: 110%;
+    background-size: 120%;
+    overflow: hidden;
+}
+
+/* media queries */
+
+@media screen and (max-width:250px) {
+    html {
+        font-size: 6px;
+    } 
+
+    #get-name {
+        font-size:6px;
+    }
+}
+
+@media screen and (min-width:251px) and (max-width:500px) {
+    html {
+        font-size: 8px;
+    } 
+    
+    #get-name {
+        font-size:6px;
+    }
+
+    #get-name {
+        height: 80vh;
+    }
+}
