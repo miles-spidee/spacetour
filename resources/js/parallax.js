@@ -11,5 +11,7 @@ window.addEventListener('scroll' , () => {
     moon.style.marginLeft = value * 2.5 + 'px';
     moon.style.marginBottom = '-' + (value * 1.5) + 'px';
     astro.style.marginBottom = value * 3.5 + 'px';
+
+    // earth.style.opacity = 1 - value * 0.010;
 })
 

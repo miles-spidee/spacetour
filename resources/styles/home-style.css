@@ -33,12 +33,12 @@ nav {
 
 .logo {
     text-shadow: 1px 1px black;
-    
+
 }
 
 .parallax {
     display: flex;
-    position:relative;
+    position: relative;
     justify-content: center;
     align-content: center;
     height: 150vh;
@@ -53,17 +53,21 @@ nav {
 
 #earth {
     bottom: -90%;
-    transform: scale(2); 
+    transform: scale(2);
     animation: rotate-e 1500s infinite linear;
     width: auto;
     height: auto;
     z-index: 4;
+    -webkit-mask: linear-gradient(red, transparent);
+    mask: linear-gradient(red, transparent);
+   
 }
 
 @keyframes rotate-e {
     0% {
         transform: rotate(0deg);
-    } 
+    }
+
     100% {
         transform: rotate(360deg);
     }
@@ -83,7 +87,7 @@ nav {
     right: 40%;
     height: auto;
     width: auto;
-    animation: movefx  10s infinite linear;
+    animation: movefx 10s infinite linear;
     z-index: 2;
 }
 
@@ -91,19 +95,23 @@ nav {
     0% {
         transform: translate(0px, 0px) scale(0.3);
     }
+
     25% {
-        transform: translate(10px,30px) scale(0.3);
+        transform: translate(10px, 30px) scale(0.3);
     }
+
     50% {
-        transform: translate(-5px,-10px) scale(0.3);   
+        transform: translate(-5px, -10px) scale(0.3);
     }
+
     75% {
-        transform: translate(-10px,20px) scale(0.3);
+        transform: translate(-10px, 20px) scale(0.3);
     }
+
     100% {
-        transform: translate(0px,0px) scale(0.3);
+        transform: translate(0px, 0px) scale(0.3);
     }
-    
+
 }
 
 #thespace {
@@ -122,6 +130,40 @@ nav {
     object-fit: cover;
 }
 
-.content {
+/* content styles */
+
+.page {
     height: 100vh;
+    margin: 2rem 5rem;
+}
+
+.greeting {  
+    display: flex;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.greet_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.welcome {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.user_name {
+    font-size: 10rem;
+}
+
+.greeting img {
+    position: absolute;
+    top: 0;
+    transform: scale(0.4);
+    left: 0;
 }
