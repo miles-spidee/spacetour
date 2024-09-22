@@ -16,10 +16,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <script src="./resources/js/loading.js"></script>
 </head>
 
 <body>
-
     <header>
         <nav><span class="logo">SPACE TOUR</span></nav>
         <section class="parallax">
@@ -27,37 +27,157 @@
             <img src="./resources/img/home/astro.png" alt="" id="astro">
             <span id="thespace">THE SPACE</span>
             <img src="./resources/img/home/moon.png" alt="" id="moon">
-            <img src="./resources/img/earth.png" alt="" id="earth">
+            <div class="earth_container"><img src="./resources/img/earth.png" alt="" id="earth"></div>
         </section>
         </div>
     </header>
 
     <main>
         <div class="greeting page">
+
             <div class="greet_content">
                 <p><span class="welcome">WELCOME </span>
-                    <span class="user_name">name</span></p>
+                    <span class="user_name" id="username"></span>
+                </p>
                 <div class="greeting_desc">
-                    Embark on an interstellar journey filled with fascinating space facts and cosmic wonders. Discover the
-                    mysteries of the universe, learn about distant galaxies, and uncover the secrets of our solar system.
-    
-                    Are you ready for an out-of-this-world adventure? Get ready to test your knowledge and have fun with our
+                    Embark on an interstellar journey filled with fascinating space facts and cosmic wonders. Discover
+                    the
+                    mysteries of the universe, learn about distant galaxies, and uncover the secrets of our solar
+                    system.
+
+                    Are you ready for an out-of-this-world adventure? Get ready to test your knowledge and have fun with
+                    our
                     exciting space game at the end!
-    
+
                     Let’s blast off into the cosmos! 🚀✨
                 </div>
             </div>
             <img src="./resources/img/home/astro.png" alt="">
         </div>
 
-        <div class="page">
-
+        <!-- fact 1 -->
+        <div class="page fact_pg">
+            <div class="fact_count">FACT #1</div>
+            <div class="fact">
+                <div class="fact_text vertical_center">
+                    <div>
+                        The hottest planet in our solar system is Venus.🔥
+                    </div>
+                </div>
+                <div class="fact_img "><img class="rotate_planets" src="./resources/img/facts/venus.png" alt=""></div>
+            </div>
         </div>
+
+
+        <!-- fact 2 -->
+        <div class="page fact_pg">
+            <div class="fact_count">FACT #2</div>
+            <div class="fact">
+                <div class="fact_text vertical_center">
+                    <div>
+                        A light-year is the distance covered by light in a single year. 🔦
+                    </div>
+                </div>
+                <div class="fact_img "><img class="border_circle" src="./resources/img/facts/light.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <!-- fact 3 -->
+        <div class="page fact_pg">
+            <div class="fact_count">FACT #3</div>
+            <div class="fact">
+                <div class="fact_text vertical_center">
+                    <div>
+                        Footprints left on the Moon won’t disappear as there is no wind. 💨
+                    </div>
+                </div>
+                <div class="fact_img "><img class="border_circle" src="./resources/img/facts/footprint.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- fact 4 -->
+        <div class="page fact_pg">
+            <div class="fact_count">FACT #4</div>
+            <div class="fact">
+                <div class="fact_text vertical_center">
+                    <div>
+                        There are 79 known moons orbiting Jupiter. 🌕*79
+                    </div>
+                </div>
+                <div class="fact_img "><img src="./resources/img/facts/jupiter.png" alt=""></div>
+            </div>
+        </div>
+
+        <!-- fact 5 -->
+        <div class="page fact_pg">
+            <div class="fact_count">FACT #5</div>
+            <div class="fact">
+                <div class="fact_text vertical_center">
+                    <div>
+                        Earth is the only planet not named after a God.
+                    </div>
+                </div>
+                <div class="fact_img "><img src="./resources/img/earth.png" alt=""></div>
+            </div>
+        </div>
+
+        <div class="intro_riddle page">
+            <p>are you ready for the</p>
+            <p class="word_riddle">riddle?</p>
+            <div class="intro_riddle_astro">
+                <img src="./resources/img/home/astro.png" alt="">
+            </div>
+        </div>
+
+        <div class="game-container page">
+            <h1 class="riddle_header">Riddle Game</h1>
+            <div class="riddle" id="riddle"></div>
+            <input type="text" id="answer" placeholder="Your answer here">
+            <button id="submit">check✏️</button>
+            <button id="skip">Skip⏭️</button>
+            <button id="next" style="display: none;">▶️Next◀️</button>
+            <div class="feedback" id="feedback"></div>
+            <div class="score" id="score">Score: 0</div>
+            <button id="retry" style="display: none;">Retry 🔄️</button>
+        </div>
+        </div>
+        <script src="./resources/js/riddle.js"></script>
+
     </main>
+
+    <footer>
+        <div class="footer_content">
+            <div class="footer_text">THE SPACE TOUR</div>
+            <div class="made_by">made with precision by ❤️ WEB CRAFTERS , 𝙼𝚒𝚕𝚎𝚜 & Rakshitha </div>
+        </div>
+        </div>
+    </footer>
+
+    <div class="easter_egg">
+        <div class="blank"></div>
+        <div class="easter_mssg">
+            <h1>you: oooh where am I ? Is this an error?</h1>
+            <h1>someone: oops , is that the big bang?</h1>
+            <h1>someother one: I think so.</h1>
+            <h1>someother other one: Now how can we escape this?</h1>
+            <h1>God: Find the secret link and get out , simple :)</h1>
+        </div>
+        <div class="secret">
+           <marquee behavior="" direction=""> <h1>YOU FOUND A EASTER EGG ARENA !!! 🥚</h1></marquee>
+           <div class="easter-egg" id="easter-egg">
+            You found the secret link! 
+            <br>
+            <a href="easter-egg.html" class="link" target="_blank">Click here to get to the!</a>
+        </div>
+        </div>
+    </div>
 
     <video src="./resources/img/star_twinkling.mp4" autoplay muted loop id="bg-vid">vid</video>
 
     <script src="./resources/js/parallax.js"></script>
+    <script src="./resources/js/app.js"></script>
+
 
 </body>
 

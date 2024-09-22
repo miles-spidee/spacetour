@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter Egg Link</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #todo {
+            position: absolute;
+            top: 0;
+        }
+
+        .easter-egg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none; /* Hidden initially */
+        }
+        .link {
+           text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <p id="todo">find the easter egg</p>
+    <div class="easter-egg" id="easter-egg">
+        <a href="secret.html" class="link" target="_blank">🥚</a>
+    </div>
+
+    <script>
+        const easterEgg = document.getElementById('easter-egg');
+        const easterEggPosition = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+        const visibilityRadius = 150; // Change this value for sensitivity
+
+        document.addEventListener('mousemove', (event) => {
+            const distance = Math.sqrt(
+                Math.pow(event.clientX - easterEggPosition.x, 2) +
+                Math.pow(event.clientY - easterEggPosition.y, 2)
+            );
+
+            if (distance < visibilityRadius) {
+                easterEgg.style.display = 'block';
+                const opacity = 1 - (distance / visibilityRadius); // Fade based on distance
+                easterEgg.style.opacity = opacity;
+            } else {
+                easterEgg.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
