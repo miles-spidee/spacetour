@@ -321,6 +321,7 @@ text-align: center;
 
 .intro_riddle_astro img {
     height: 100%;
+    animation: movefx 10s infinite linear;
 }
 
 #word_riddle {
@@ -333,7 +334,7 @@ text-align: center;
 .game-container img {
     position: absolute;
     left: 50%;
-    opacity: 0.4;
+    opacity: 0.5;
     animation: rotate-f 200s infinite linear;
     z-index: -10;
     object-fit: cover;
