@@ -39,8 +39,7 @@ function displayRiddle() {
         riddleElement.textContent = currentRiddle.question;
         answerInput.value = '';
         feedbackElement.textContent = '';
-        feedbackElement.style.display = 'none'; // Hide feedback initially
-
+        feedbackElement.style.display = 'none'; 
         nextButton.style.display = 'none';
         answerInput.style.display = "inline";
         submitButton.style.display = 'inline';

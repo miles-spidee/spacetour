@@ -29,7 +29,7 @@
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            display: none; /* Hidden initially */
+            display: none; 
         }
         .link {
            text-decoration: none;
@@ -45,8 +45,7 @@
     <script>
         const easterEgg = document.getElementById('easter-egg');
         const easterEggPosition = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-        const visibilityRadius = 150; // Change this value for sensitivity
-
+        const visibilityRadius = 150;
         document.addEventListener('mousemove', (event) => {
             const distance = Math.sqrt(
                 Math.pow(event.clientX - easterEggPosition.x, 2) +
@@ -55,7 +54,7 @@
 
             if (distance < visibilityRadius) {
                 easterEgg.style.display = 'block';
-                const opacity = 1 - (distance / visibilityRadius); // Fade based on distance
+                const opacity = 1 - (distance / visibilityRadius); 
                 easterEgg.style.opacity = opacity;
             } else {
                 easterEgg.style.display = 'none';
