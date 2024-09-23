@@ -9,7 +9,7 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-    width: 0.4vw; 
+    width: 0.4vw;
 }
 
 ::-webkit-scrollbar-track {
@@ -17,18 +17,18 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: white; 
+    background: white;
     opacity: 0.6;
-    border-radius: 12px; 
-    transition: background 0.3s; 
+    border-radius: 12px;
+    transition: background 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: #424242; 
+    background: #424242;
 }
 
 body {
@@ -58,10 +58,9 @@ nav {
     width: 100%;
 }
 
-.logo {
+/* .logo {
     text-shadow: 1px 1px black;
-
-}
+} */
 
 .parallax {
     display: flex;
@@ -148,6 +147,7 @@ nav {
     font-size: 15rem;
     z-index: 3;
     transform: translateY(200px);
+    font-weight: 600;
 }
 
 #bg-vid {
@@ -237,10 +237,10 @@ nav {
 
 .fact_text {
     width: 60%;
-    font-size: 2rem;
+    font-size: 2.7rem;
 }
 
-.fact_img{
+.fact_img {
     -webkit-mask: linear-gradient(red, transparent);
     mask: linear-gradient(red, transparent);
     width: 40%;
@@ -254,13 +254,14 @@ nav {
 }
 
 .rotate_planets {
-    animation: rotate-f 300s infinite linear ;
+    animation: rotate-f 300s infinite linear;
 }
 
 @keyframes rotate-f {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -268,7 +269,30 @@ nav {
 
 /* riddle */
 
-.intro_riddle{
+.intro_riddle  > img {
+    opacity: 0.5;
+    object-fit: cover;
+    position: absolute;
+    animation: move-linearly 200s infinite linear;
+    z-index: -10;
+}
+
+@keyframes move-linearly {
+    from {
+        transform: rotate(0deg);
+        left: 70%;
+    }
+
+    to {
+        transform: rotate(360deg);
+        left: -30%;
+    }
+}
+
+.intro_riddle {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,10 +301,14 @@ nav {
     text-transform: uppercase;
 }
 
-.intro_riddle p , .word_riddle {
-    width: 100%;
-    text-align: center;
-    font-size: 4rem;
+.intro_riddle p {
+    font-size: 2rem;
+}
+
+.intro_riddle p,
+{
+width: 100%;
+text-align: center;
 }
 
 .intro_riddle_astro {
@@ -295,22 +323,55 @@ nav {
     height: 100%;
 }
 
+#word_riddle {
+    font-size: 10rem;
+    font-weight: 700;
+}
+
 /* game */
 
+.game-container img {
+    position: absolute;
+    left: 50%;
+    opacity: 0.4;
+    animation: rotate-f 200s infinite linear;
+    z-index: -10;
+    object-fit: cover;
+}
+
 .game-container {
-    margin: 2rem 5rem;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    border-bottom: 1px white solid;
+
 }
 
+.riddle_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.riddle_container>* {
+    margin-bottom: 2rem;
+}
+
+
 .riddle_header {
-    font-size: 10rem;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 .riddle {
-    font-size: 2rem;
+    font-size: 3.5rem;
 }
 
 input {
@@ -365,7 +426,7 @@ footer {
 
 .easter_egg {
     background-color: white;
-    color:black;
+    color: black;
     position: relative;
     height: 200vh;
     padding: 2rem;
@@ -379,11 +440,39 @@ footer {
     height: 60%;
 }
 
+.easter_mssg {
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.narrating {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 2rem;
+}
+
 .easter_mssg h1 {
     font-family: monospace;
     font-size: 1rem;
     padding-bottom: 2rem;
     opacity: 1;
+}
+
+.narrator {
+    font-weight: 1000;
+    background-color: black;
+    color: white;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+
+#score {
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+
 }
 
 /* secret link */
@@ -397,9 +486,16 @@ footer {
     background-color: bisque;
     border-radius: 10px;
     text-align: center;
-    display: block; /* Hidden initially */
+    display: block;
 }
+
 .link {
     color: blue;
     text-decoration: underline;
+    transition: font-weight font-size 0.3s;
+}
+
+.link:hover {
+    color: red;
+    font-weight: 1000;
 }
