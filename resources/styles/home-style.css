@@ -177,11 +177,16 @@ nav {
     border-radius: 50%;
 }
 
+
+
 /* content styles */
 
 .page {
     height: 100vh;
     position: relative;
+}
+
+.page_content {
     margin: 2rem 8rem;
 }
 
@@ -204,25 +209,55 @@ nav {
 .welcome {
     font-size: 3rem;
     font-style: italic;
+    font-weight: 500;
 }
 
 .user_name {
     font-size: 10rem;
 }
 
-.greeting img {
-    position: absolute;
-    top: 0;
-    transform: scale(0.4);
-    left: -100%;
+.greeting_desc {
+    font-size: 1.7rem;
+    text-align: justify;
 }
 
+.greeting img {
+    position: absolute;
+    width: 200px;
+    opacity: 0.5;
+    z-index: -10;
+    animation: float-rotate 30s ease-in-out 5s forwards;
+}
+
+@keyframes float-rotate {
+    from {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+        transform: translate(80vw, 60vh) rotate(360deg);
+    }
+}
+
+
 /* facts */
+.fact_pg > img {
+    position: absolute;
+    transform: scale(0.3);
+    opacity: 0.5;
+    top: -20%;
+    left: 20%;
+    z-index: -10;
+    animation: movefx 10s infinite linear;
+}
+
 .fact_pg {
+    background: linear-gradient(90deg, hsla(0, 0%, 79%, 0.2) 0, transparent 20%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    border-top: white solid 1px;
+    border-bottom: white solid 1px;
 }
 
 .fact {
@@ -233,11 +268,14 @@ nav {
 .fact_count {
     width: 100%;
     font-size: 3rem;
+    font-family: monospace;
 }
 
 .fact_text {
     width: 60%;
-    font-size: 2.7rem;
+    font-size: 3.7rem;
+    font-weight: 600;
+    margin-right: 1rem;
 }
 
 .fact_img {
@@ -269,12 +307,13 @@ nav {
 
 /* riddle */
 
-.intro_riddle  > img {
+.intro_riddle>img {
     opacity: 0.5;
     object-fit: cover;
     position: absolute;
-    animation: move-linearly 200s infinite linear;
+    animation: move-linearly 200s linear 10s infinite;
     z-index: -10;
+    left: 70%;
 }
 
 @keyframes move-linearly {
@@ -305,10 +344,10 @@ nav {
     font-size: 2rem;
 }
 
-.intro_riddle p,
+.intro_riddle p
 {
-width: 100%;
-text-align: center;
+    width: 100%;
+    text-align: center;
 }
 
 .intro_riddle_astro {
