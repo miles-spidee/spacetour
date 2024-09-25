@@ -56,6 +56,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
+    overflow: hidden;
 }
 
 /* .logo {
@@ -181,8 +182,14 @@ nav {
 
 /* content styles */
 
-.page {
+/* .page {
     height: 100vh;
+    position: relative;
+} */
+
+.page {
+    height: auto;
+    padding: 8rem 0;
     position: relative;
 }
 
@@ -198,7 +205,7 @@ nav {
 }
 
 .greet_content {
-
+    padding-bottom: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,6 +240,7 @@ nav {
     from {
         transform: translate(0, 0) rotate(0deg);
     }
+
     to {
         transform: translate(80vw, 60vh) rotate(360deg);
     }
@@ -240,7 +248,7 @@ nav {
 
 
 /* facts */
-.fact_pg > img {
+#satellite {
     position: absolute;
     transform: scale(0.3);
     opacity: 0.5;
@@ -263,6 +271,8 @@ nav {
 .fact {
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .fact_count {
@@ -344,8 +354,7 @@ nav {
     font-size: 2rem;
 }
 
-.intro_riddle p
-{
+.intro_riddle p {
     width: 100%;
     text-align: center;
 }
@@ -539,3 +548,177 @@ footer {
     color: red;
     font-weight: 1000;
 }
+
+/* media queries */
+
+@media screen and (min-width:2000px) {
+    html {
+        font-size: 24px;
+    }
+
+    #moon {
+        transform: scale(1);
+    }
+    
+    #astro {
+        bottom: -10%;
+        right: 20%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    #thespace {
+        font-size: 12rem;
+    }
+
+    #moon {
+        bottom: 50%;
+        left: 40%;
+    }
+
+    #astro {
+        bottom: 20%;
+        right: 30%;
+    }
+
+    #thespace {
+        font-size: 9rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 10px;
+    }
+
+    #moon {
+        bottom: 45%;
+        left: 30%;
+    }
+
+    #astro {
+        bottom: 5%;
+        right: 10%;
+    }
+
+    /* 
+    .fact_pg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    } */
+
+    .fact {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .fact_count {
+        margin-bottom: 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fact_text {
+        margin-bottom: 1.5rem;
+        width: 100%;
+        margin-right: 0px;
+        text-align: center;
+        height: 50%;
+    }
+
+    .fact_img {
+        -webkit-mask: linear-gradient(red, transparent);
+        mask: linear-gradient(red, transparent);
+        width: 60%;
+        margin: 0 auto;
+        height: 50%;
+    }
+
+    #satellite {
+        scale: 0.6;
+        left: -30%;
+    }
+
+    .page {
+        height: auto;
+        padding: 8rem 0;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #moon {
+        bottom: 45%;
+        left: 30%;
+    }
+
+    #astro {
+        bottom: 10%;
+        right: 0%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    #moon {
+        bottom: 45%;
+        left: 10%;
+    }
+
+    #astro {
+        bottom: 40%;
+        right: 20%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #moon {
+        bottom: 45%;
+        left: -10%;
+    }
+
+    #astro {
+        bottom:30%;
+        right: -10%;
+        width: 150%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    #moon {
+        bottom: 45%;
+        left: -50%;
+    }
+
+    #astro {
+        bottom:50%;
+        right: -10%;
+        width: 150%;
+    }
+}
+
+@media screen and (min-width:240px) and (max-width:500px) {
+    html {
+        font-size: 5px;
+    }
+
+    .fact_img {
+        width: 80%;
+    }
+
+    .page_content {
+        margin: 0rem 5rem;
+    }
+
+    .page {
+        height: auto;
+        padding: 5rem 0;
+    }
+
+    #satellite {
+        display: none;
+    }
+}
+
