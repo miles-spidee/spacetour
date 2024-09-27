@@ -14,6 +14,7 @@
             background-color: #f0f0f0;
             overflow: hidden;
             position: relative;
+            background: radial-gradient(circle, white 20%, rgba(255, 255, 255, 0.8) 50%, rgb(162, 161, 162) 100%);
         }
 
         #todo {
@@ -36,6 +37,25 @@
         }
         .link {
            text-decoration: none;
+        }
+
+        @media screen and (min-width:2000px) {
+            #todo {
+                font-size: 4rem;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            #todo {
+                font-size: 1rem;
+            }
+        }
+
+        
+        @media screen and (max-width:300px) {
+            #todo {
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>

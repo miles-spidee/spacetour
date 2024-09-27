@@ -316,12 +316,21 @@ nav {
 }
 
 /* riddle */
+.riddle_welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 15rem 0;
+}
 
 .intro_riddle>img {
     opacity: 0.5;
     object-fit: cover;
     position: absolute;
-    animation: move-linearly 200s linear 10s infinite;
+    animation: move-linearly 100s linear 10s infinite;
     z-index: -10;
     left: 70%;
 }
@@ -339,9 +348,7 @@ nav {
 }
 
 .intro_riddle {
-    height: 100vh;
     overflow: hidden;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -351,16 +358,13 @@ nav {
 }
 
 .intro_riddle p {
+    width: 100%;
+    text-align: center;
     font-size: 2rem;
 }
 
-.intro_riddle p {
-    width: 100%;
-    text-align: center;
-}
-
 .intro_riddle_astro {
-    height: 20%;
+    height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -368,12 +372,13 @@ nav {
 }
 
 .intro_riddle_astro img {
-    height: 100%;
+    width: 30%;
     animation: movefx 10s infinite linear;
 }
 
 #word_riddle {
-    font-size: 10rem;
+    text-align: center;
+    font-size: 8em;
     font-weight: 700;
 }
 
@@ -398,12 +403,12 @@ nav {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    height: 100vh;
     border-bottom: 1px white solid;
 
 }
 
 .riddle_container {
+    padding-bottom: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -504,7 +509,7 @@ footer {
 
 .easter_mssg h1 {
     font-family: monospace;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding-bottom: 2rem;
     opacity: 1;
 }
@@ -519,9 +524,11 @@ footer {
 
 #score {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 40px;
     color: black;
-
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
+    display: inline;
 }
 
 /* secret link */
@@ -568,6 +575,12 @@ footer {
 }
 
 @media screen and (max-width:1300px) {
+    #word_riddle {
+        font-size: 8rem;
+    }
+}
+
+@media screen and (max-width:1300px) {
     #thespace {
         font-size: 12rem;
     }
@@ -584,6 +597,11 @@ footer {
 
     #thespace {
         font-size: 9rem;
+    }
+
+    .game-container > img {
+        top: -20%;
+        left: 30%;
     }
 }
 
@@ -644,7 +662,7 @@ footer {
 
     .page {
         height: auto;
-        padding: 8rem 0;
+        padding: 10rem 0;
     }
 }
 
@@ -657,6 +675,10 @@ footer {
     #astro {
         bottom: 10%;
         right: 0%;
+    }
+
+    .game-container > img {
+        left: 10%;
     }
 }
 
@@ -671,6 +693,10 @@ footer {
         right: 20%;
         width: 100%;
     }
+
+    #word_riddle {
+        font-size: 7rem;
+    }
 }
 
 @media screen and (max-width:500px) {
@@ -684,6 +710,11 @@ footer {
         right: -10%;
         width: 150%;
     }
+
+    .game-container > img {
+        left: -30%;
+        top: -40%;
+    }
 }
 
 @media screen and (max-width:320px) {
@@ -696,6 +727,12 @@ footer {
         bottom:50%;
         right: -10%;
         width: 150%;
+    }
+
+    
+    .game-container > img {
+        left: -50%;
+        top: -90%;
     }
 }
 

@@ -26,6 +26,7 @@ let score = 0;
 
 const riddleElement = document.getElementById('riddle');
 const answerInput = document.getElementById('answer');
+const answerLabel = document.getElementById('answer_label')
 const submitButton = document.getElementById('submit');
 const skipButton = document.getElementById('skip');
 const feedbackElement = document.getElementById('feedback');
@@ -42,6 +43,7 @@ function displayRiddle() {
         feedbackElement.style.display = 'none'; 
         nextButton.style.display = 'none';
         answerInput.style.display = "inline";
+        answerLabel.style.display = 'inline';
         submitButton.style.display = 'inline';
         skipButton.style.display = 'inline';
         retryButton.style.display = 'none';
@@ -58,6 +60,7 @@ function showFinalScore() {
         riddleElement.textContent = "Better luck next time! You scored: " + score + "👏";
     }
     answerInput.style.display = "none";
+    answerLabel.style.display = 'none';
     submitButton.style.display = 'none';
     skipButton.style.display = 'none';
     nextButton.style.display = 'none'; 
@@ -80,6 +83,7 @@ submitButton.addEventListener('click', () => {
     feedbackElement.style.display = 'block'; 
     nextButton.style.display = 'inline';
     answerInput.style.display = 'none'; 
+    answerLabel.style.display = 'none';
     submitButton.style.display = 'none'; 
     skipButton.style.display = 'none';
 });
@@ -89,6 +93,7 @@ skipButton.addEventListener('click', () => {
     feedbackElement.style.display = 'block'; 
     nextButton.style.display = 'inline'; 
     answerInput.style.display = 'none'; 
+    answerLabel.style.display = 'none';
     submitButton.style.display = 'none'; 
     skipButton.style.display = 'none'; 
 });
