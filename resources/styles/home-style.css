@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
-    /* border: 1px yellow solid; */
+    border: 1px yellow solid;
 }
 
 /* Custom scrollbar */
@@ -79,18 +79,25 @@ nav {
 }
 
 .earth_container {
-    top: -10%;
-    -webkit-mask: linear-gradient(red, transparent 40%);
-    mask: linear-gradient(red, transparent 40%);
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    top: 35%;
+    border: 2px red solid;
+    position: absolute;
+    /* -webkit-mask: linear-gradient(red, transparent 40%);
+    mask: linear-gradient(red, transparent 40%); */
 }
 
 #earth {
-    transform: scale(2);
-    animation: rotate-e 1500s infinite linear;
-    z-index: 4;
-    object-fit: cover;
+    z-index: 100;
+    position: relative;
+    width: 100%;
+    object-fit: contain;
+    scale: 2;
     object-position: center;
-    align-self: 1/1;
+    aspect-ratio: 1/1;
+
 }
 
 @keyframes rotate-e {
