@@ -438,11 +438,23 @@ input {
     padding: 10px;
     margin-top: 10px;
     width: 200px;
-    border-radius: 10px;
+    border-radius: 40px;
 }
 
 #feedback {
     font-size: 2rem;
+}
+
+#answer {
+    display: block;
+    font-size: 1.2rem;
+    width: 40%;
+    padding: 1rem;
+}
+
+.action_btns {
+    margin-top: 1rem;
+    font-size: 1.2rem;
 }
 
 button {
@@ -584,6 +596,11 @@ footer {
         right: 20%;
         width: 100%;
     }
+
+    #answer {
+        font-size: 1.2rem;
+        width: 40%;
+    }
 }
 
 @media screen and (max-width:1300px) {
@@ -639,6 +656,15 @@ footer {
         justify-content: center;
         align-content: center;
     } */
+
+    button , #answer , #score {
+        padding: 2rem;
+        font-size: 2rem !important;
+    }
+
+    #answer {
+        width: 70%;
+    }
 
     .fact {
         width: 100%;
