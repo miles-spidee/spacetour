@@ -184,7 +184,9 @@ nav {
     border-radius: 50%;
 }
 
-
+.underline {
+    border-bottom: 1px white solid;
+}
 
 /* content styles */
 
