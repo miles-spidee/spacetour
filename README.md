@@ -19,4 +19,3 @@ You can view the live project at: [Space Tour](https://webcrafters-spacetour.net
 - JavaScript
 - Local Storage for saving user data
 
-
