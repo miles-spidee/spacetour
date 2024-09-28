@@ -8,9 +8,10 @@ You can view the live project at: [Space Tour](https://webcrafters-spacetour.net
 
 ## Features
 
-- **User Interaction**: Users can enter their names, which will be stored and displayed throughout the experience.
-- **Dynamic Content**: A variety of space facts are presented to keep users engaged and informed.
+- **User Interaction** : Users can enter their names, which will be stored and displayed throughout the experience.
+- **Dynamic Content**  : A variety of space facts are presented to keep users engaged and informed.
 - **Responsive Design**: The application is designed to work seamlessly across devices.
+- **Logical**          : Invalid usernames arent taken. 
 
 ## Technologies Used
 
