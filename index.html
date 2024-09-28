@@ -12,9 +12,7 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -29,11 +27,13 @@
 
         <div id="get-name">
             <p class="desc">Woooho! Are you excited to learn something about the endless space? ✨ <br>
-                Thats cool! Enter your name below to launch our rocket 🚀</p>
-            <form action="home.html" method="GET">
+                That's cool! Enter your name below to launch our rocket 🚀</p>
+            <form>
                 <div class="input-wrapper">
-                    <input type="text" name="name" placeholder="Enter Name" id="name-input" required>
+                    <input type="text" name="name" placeholder="Enter Name" id="name-input" >
                 </div>
+                <p>your name is not saved , its for a personal experience until you close the site</p>
+                <div id="error-message"></div>
                 <div class="p-ns"><button value="submit" name="submit" id="name-submit">SUBMIT</button></div>
             </form>
         </div>
@@ -43,6 +43,13 @@
     </main>
 
     <script src="./resources/js/app.js"></script>
+    <script>
+        document.getElementById('name-submit').addEventListener('click', function() {
+            const name = document.getElementById('name-input').value;
+            localStorage.setItem('userName', name);
+            window.location.href = 'home.html';
+        });
+    </script>
 </body>
 
 </html>

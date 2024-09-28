@@ -657,6 +657,12 @@ footer {
         align-content: center;
     } */
 
+    .game-container {
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+    }
+
     button , #answer , #score {
         padding: 2rem;
         font-size: 2rem !important;

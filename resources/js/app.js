@@ -1,13 +1,18 @@
 const btn = document.getElementById('name-submit');
-let name_value = '';
-
-const user_name = localStorage.getItem('username');
-document.getElementById('username').textContent = `${user_name ? user_name.toUpperCase() : 'EXPLORER'}`;
+const errorMessage = document.getElementById('error-message');
 
 btn.addEventListener('click', function (event) {
-    event.preventDefault();
-    name_value = document.getElementById('name-input').value;
-    localStorage.setItem('username', name_value);
-    document.getElementById('username').textContent = name_value.toUpperCase(); 
- });
+    event.preventDefault(); 
+
+    const nameInput = document.getElementById('name-input').value.trim(); 
+
+    const namePattern = /^[A-Za-z\s]+$/;
+
+    if (nameInput === '' || !namePattern.test(nameInput)) {
+        errorMessage.textContent = 'Please enter a valid name (only letters and spaces).';
+    } else {
+        localStorage.setItem('username', nameInput);
+        document.getElementById('username').textContent = nameInput.toUpperCase();
+    }
+});
 

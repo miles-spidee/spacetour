@@ -135,6 +135,11 @@ header {
     animation: rotate-e 700s infinite linear;
  }
 
+ #error-message {
+    margin: 0.5rem 0;
+    color: red;
+ }
+
  @keyframes rotate-e {
     0% {
         transform: rotate(0deg);

@@ -200,7 +200,10 @@
 
     <script src="./resources/js/parallax.js"></script>
     <script src="./resources/js/app.js"></script>
-
+    <script>
+        const username = localStorage.getItem('userName').toUpperCase();
+        document.getElementById('username').textContent = username ? username : 'EXPLORER';
+    </script>
 
 </body>
 
