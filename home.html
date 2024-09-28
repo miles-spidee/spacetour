@@ -200,11 +200,16 @@
 
     <script src="./resources/js/parallax.js"></script>
     <script src="./resources/js/app.js"></script>
-    <script>
+    <!-- <script>
         const username = localStorage.getItem('userName').toUpperCase();
         document.getElementById('username').textContent = username ? username : 'EXPLORER';
+    </script> -->
+    <script>
+        const username = localStorage.getItem('userName')?.toUpperCase() || 'EXPLORER';
+        const truncatedUsername = username.length > 10 ? username.slice(0, 10) + "..." : username;
+        document.getElementById('username').textContent = truncatedUsername;
     </script>
-
+    
 </body>
 
 </html>
