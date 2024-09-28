@@ -4,7 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     list-style: none;
-    border: 1px yellow solid;
+    /* border: 1px yellow solid; */
 }
 
 /* Custom scrollbar */
@@ -66,10 +66,11 @@ nav {
 .parallax {
     display: flex;
     position: relative;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
     height: 150vh;
     overflow: hidden;
+    text-align: center;
+    border-bottom: 2px white solid;
 }
 
 .parallax img {
@@ -78,26 +79,24 @@ nav {
     pointer-events: none;
 }
 
-.earth_container {
-    width: 100%;
-    overflow: hidden;
-    height: auto;
-    top: 35%;
-    border: 2px red solid;
+/* .earth_container {
     position: absolute;
-    padding: none;
-    /* -webkit-mask: linear-gradient(red, transparent 40%);
-    mask: linear-gradient(red, transparent 40%); */
-}
+    top: 34%;
+    width: 100%;
+    border: 2px red solid;
+    display: flex;
+    justify-content: center;
+} */
 
 #earth {
-    z-index: 100;
-    position: relative;
-    width: 100%;
-    height: 250vh;
-    object-fit: contain;
-    aspect-ratio: 1/1;
-
+   object-position: center;
+   position: absolute;
+   scale: 2.5;
+   margin: 0 auto;
+   z-index: 10;
+   top: 80%;
+   left: 70%;
+   animation: rotate-e 700s infinite linear;
 }
 
 @keyframes rotate-e {
@@ -442,6 +441,10 @@ input {
     border-radius: 10px;
 }
 
+#feedback {
+    font-size: 2rem;
+}
+
 button {
     padding: 10px;
     margin: 10px;
@@ -483,6 +486,7 @@ footer {
     padding: 3rem;
     border-top: 1px white solid;
     border-bottom: 100px white solid;
+    font-size: 1.5rem;
 }
 
 .easter_egg {
@@ -519,6 +523,7 @@ footer {
     font-size: 1.2rem;
     padding-bottom: 2rem;
     opacity: 1;
+    margin-bottom: 1rem;
 }
 
 .narrator {
@@ -735,7 +740,6 @@ footer {
         right: -10%;
         width: 150%;
     }
-
     
     .game-container > img {
         left: -50%;
@@ -763,6 +767,39 @@ footer {
 
     #satellite {
         display: none;
+    }
+
+    .welcome {
+        font-size: 3rem;
+    }
+
+    .greeting_desc {
+        font-size: 4rem;
+    }
+
+    .intro_riddle p{
+        font-size: 4rem;
+    }
+
+    #word_riddle {
+        font-size: 10rem;
+    }
+
+    #score {
+        font-size: 3.3rem;
+    }
+
+    footer {
+        font-size: 2.3rem;
+        padding: 8rem 0;
+    }
+
+    .narrating h1 {
+        font-size: 3rem;
+    } 
+
+    .secret {
+        font-size: 3rem;
     }
 }
 
