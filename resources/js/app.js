@@ -11,8 +11,9 @@ btn.addEventListener('click', function (event) {
     if (nameInput === '' || !namePattern.test(nameInput)) {
         errorMessage.textContent = 'Please enter a valid name (only letters and spaces).';
     } else {
-        localStorage.setItem('username', nameInput);
-        document.getElementById('username').textContent = nameInput.toUpperCase();
+        const name = document.getElementById('name-input').value;
+        localStorage.setItem('userName', name);
+        window.location.href = 'home.html';
     }
 });
 
