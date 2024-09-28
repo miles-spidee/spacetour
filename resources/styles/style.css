@@ -30,6 +30,7 @@ main {
     flex-direction: column;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 header {
@@ -56,7 +57,7 @@ header {
 
 #get-name .desc {
     text-align: center;
-    padding: 0 4em;
+    padding: 0 2em;
     font-size: 2em;
     padding-top: 3%;
 }
@@ -95,6 +96,7 @@ header {
     border: none;
     padding: 1em;
     z-index: 5;
+    width: 100%;
 }
 
 .p-ns {
@@ -119,16 +121,33 @@ header {
     color: black;
 }
 
-.earth-container {
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    align-content: center;
-    background-position: center;
-    background-image: url(/resources/img/earth.png);
-    padding-top: 110%;
-    background-size: 120%;
-    overflow: hidden;
+.earth_container {
+    display: flex;
+    justify-content: center;
+}
+
+#earth {
+    top: 40%;
+    position: absolute;
+    scale: 1;
+    margin: 0 auto;
+    z-index: 1;
+    animation: rotate-e 700s infinite linear;
+ }
+
+ #error-message {
+    margin: 0.5rem 0;
+    color: red;
+ }
+
+ @keyframes rotate-e {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* media queries */
@@ -154,5 +173,11 @@ header {
 
     #get-name {
         height: 80vh;
+    }
+}
+
+@media screen and (max-width:850px) {
+    #get-name {
+        font-size: 10px;
     }
 }
