@@ -113,7 +113,7 @@ header {
     z-index: 5;
     transition: 0.2s background-color;
     letter-spacing: 2px;
-    background-color: transparent;
+    background-color: rgba(20, 20, 20, 0.7);
 }
 
 #name-submit:hover {
@@ -133,6 +133,7 @@ header {
     margin: 0 auto;
     z-index: 1;
     animation: rotate-e 700s infinite linear;
+    opacity: 0.7;
  }
 
  #error-message {
