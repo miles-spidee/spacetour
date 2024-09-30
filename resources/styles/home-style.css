@@ -492,6 +492,23 @@ button:active {
     margin-top: 20px;
 }
 
+#next {
+    animation: bg-animate 1s infinite;
+}
+
+@keyframes bg-animate {
+    from {
+        background-color: white;
+        margin-right: 2rem;
+    }
+
+    to {
+        background-color: aquamarine;
+        margin-right: 0rem;
+        margin-left: 1remm;
+    }
+}
+
 /* footer */
 
 footer {
@@ -501,6 +518,19 @@ footer {
     border-top: 1px white solid;
     border-bottom: 100px white solid;
     font-size: 1.5rem;
+}
+
+#github {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0rem 1rem;
+}
+
+#github:hover {
+    background-color: rgb(116, 118, 118);
+    border-bottom: 3px solid white;
 }
 
 .easter_egg {
@@ -783,7 +813,7 @@ footer {
 
 @media screen and (min-width:240px) and (max-width:500px) {
     html {
-        font-size: 5px;
+        font-size: 6px;
     }
 
     .fact_img {
@@ -819,8 +849,19 @@ footer {
         font-size: 10rem;
     }
 
+    #riddle , #feedback {
+        font-size: 6rem;
+        margin-bottom: 5rem;
+    }
+
     #score {
         font-size: 3.3rem;
+    }
+
+    button , #answer , #score {
+        padding: 3rem;
+        font-size: 3rem !important;
+        margin: 5rem 1rem!important;
     }
 
     footer {
