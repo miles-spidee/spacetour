@@ -13,7 +13,7 @@ const riddles = [
     },
     {
         question: "How many know moons are there on Jupiter?",
-        answer: "79"
+        answer: "95"
     } , 
     {
         question: "Which is the only planet not named after a God.",
